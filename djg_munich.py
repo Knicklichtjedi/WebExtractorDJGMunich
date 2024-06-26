@@ -79,7 +79,6 @@ def click_alpha_navigation_button(i: int, driver: webdriver, element: WebElement
     :return: A tuple containing the accordion item and button elements
     :rtype: tuple(selenium.webdriver.WebElement, list[selenium.webdriver.WebElement])
     """
-    time.sleep(2)
 
     if i != 0:
         element.click()
@@ -118,7 +117,7 @@ def process_webpage_elements(j: int, element: WebElement, accordion_item: WebEle
     if j != 0:
         element.click()
 
-    time.sleep(2)
+    time.sleep(3)
 
     data_container = {}
 
@@ -238,7 +237,7 @@ def start_extraction(url: str):
     extracted_content = load_website(firefox_webdriver, url)
     firefox_webdriver.quit()
 
-    json.dump(extracted_content, open('./djg_munich.json', 'w+'), indent=True)
+    json.dump(extracted_content, open('./djg_munich.json', 'w+', encoding='utf-8'), indent=True, ensure_ascii=False)
 
 
 if __name__ == '__main__':
