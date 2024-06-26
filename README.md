@@ -6,4 +6,4 @@ Install:
 1. Install python 3.12
 2. Install Firefox or change selenium driver
 3. Use `pip install -r requirements.txt`
-4. Start `djg-munich.py`
+4. Start `djg_munich.py`
